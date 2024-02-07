@@ -16,7 +16,6 @@ body {
 }
 
 header {
-    background-color: #F9EFDB;
     text-align: center;
     padding: 40px 0 15px;
     display: flex;
@@ -63,7 +62,7 @@ header {
     font-family: 'Honk', system-ui;
     font-size: 30px;
     color: black;
-    z-index: 3;
+    z-index: 1;
 }
 
 /* PANEL DIFICULTAD ==============================================================================*/
@@ -391,11 +390,15 @@ header {
 
 @media(max-width: 930px) {
     .title {
+        background-color: #F9EFDB;
         position: static;
+        z-index: 3;
     }
     
     header {
+        background-color: #F9EFDB;
         padding-top: 10px;
+        z-index: 2;
     }
 
     .containTablero {
