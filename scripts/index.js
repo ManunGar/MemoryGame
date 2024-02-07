@@ -52,7 +52,7 @@ document.querySelector('.dificil').addEventListener('click', function() {
 
 function mostrarTablero() {
     document.querySelector('.modalTablero').classList.add('active');
-    document.querySelector('.modalDificultad').classList.add('ocultar');
+    document.querySelector('.modalPrincipal').classList.add('ocultar');
 }
 
 
@@ -187,7 +187,7 @@ document.querySelector('.salir').addEventListener('click', function() {
         element.remove();
     }
     document.querySelector('.modalTablero').classList.remove('active');
-    document.querySelector('.modalDificultad').classList.remove('ocultar');
+    document.querySelector('.modalPrincipal').classList.remove('ocultar');
     document.querySelector('.salir').classList.remove('mostrar');
     document.querySelector('.containTablero').classList.remove('facil','medio','dificil');
     cartasAcertadas = [];
@@ -204,7 +204,7 @@ document.querySelector('.cerrar').addEventListener('click', function() {
     }
     document.querySelector('.modalFin').classList.remove('mostrar');
     document.querySelector('.modalTablero').classList.remove('active');
-    document.querySelector('.modalDificultad').classList.remove('ocultar');
+    document.querySelector('.modalPrincipal').classList.remove('ocultar');
     document.querySelector('.containTablero').classList.remove('facil','medio','dificil');
     document.querySelector('.salir').classList.remove('mostrar');
     cartasAcertadas = [];

@@ -16,11 +16,13 @@ body {
 }
 
 header {
+    background-color: #F9EFDB;
     text-align: center;
-    padding: 50px 0 5px;
+    padding: 40px 0 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     font-family: 'Concert One', sans-serif;
     z-index: 2;
 }
@@ -61,7 +63,7 @@ header {
     font-family: 'Honk', system-ui;
     font-size: 30px;
     color: black;
-    z-index: 1;
+    z-index: 3;
 }
 
 /* PANEL DIFICULTAD ==============================================================================*/
@@ -72,6 +74,9 @@ header {
     margin: 0 auto;
     margin-top: 5%;
 }
+.modalPrincipal.ocultar {
+    display: none;
+}
 
 .modalDificultad {
     padding: 50px;
@@ -80,6 +85,7 @@ header {
     width: fit-content;
     margin: 0 auto;
     background: #EBD9B4;
+    z-index: 2;
     transform: rotateY(0deg) scale(1);
     backface-visibility: hidden;
     transition: .2s;
@@ -94,10 +100,6 @@ header {
     margin-bottom: 50px;
 }
 
-.modalDificultad.ocultar {
-   display: none;
-
-}
 
 .btnDificultad {
     display: flex;
@@ -147,7 +149,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index: 3;
+    z-index: 1;
     transform: rotateY(180deg) scale(1);
     backface-visibility: hidden;
     transition: .2s;
@@ -157,8 +159,13 @@ header {
     backface-visibility: hidden;
     transition: .2s;
 }
+.modalInfo.rotar  .containInfo{
+    display: inline-block;
+    transition: .4s;
+}
 
 .containInfo {
+    display: none;
     margin: auto;
     height: 100%;
     font-family: 'Concert One', sans-serif;
@@ -176,7 +183,7 @@ header {
 
 .containInfo p {
     width: 95%;
-    padding-bottom: 200px;
+    padding-bottom: 50px;
 }
 
 #cerrar {
@@ -212,7 +219,7 @@ header {
     height: fit-content;
     margin: auto;
     display: grid;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .containTablero.bloqueo::before {
@@ -307,7 +314,7 @@ header {
     position: absolute;
     top: -100%;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
@@ -373,4 +380,127 @@ header {
     background-color: #638889;
     box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.5);
     transition: .4s;
+}
+
+
+/*===================================================================================================*/
+/*===================================================================================================*/
+
+@media(max-width: 930px) {
+    .title {
+        position: static;
+    }
+    
+    header {
+        padding-top: 10px;
+    }
+
+    .containTablero {
+        margin-bottom: 50px;
+    }
+
+    .containTablero.medio, .containTablero.dificil {
+        grid-template-rows: repeat(6, 90px);
+        grid-template-columns: repeat(6, 70px);
+        gap: 20px;
+    }
+}
+
+@media(max-width: 600px) {
+    .title{
+        font-size: 20px;
+    }
+
+    header {
+        padding-bottom:10px ;
+    }
+
+    .puntuacion {
+        margin-left: 20px;
+        font-size: 12px;
+    }
+    .salir.mostrar {
+        margin-right: 20px;
+    }
+    .salir.mostrar button {
+        font-size: 12px;
+        padding: 8px 30px;
+    }
+
+    .modalPrincipal {
+        width: 95%;
+        margin-top: 50px;
+    }
+
+    .modalDificultad {
+        padding: 40px 0;
+        width: 100%;
+    }
+
+    .modalDificultad h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .btnDificultad button {
+        font-size: 12px;
+
+    }
+
+    #info {
+        width: 20px;
+    }
+
+    .containInfo h1 {
+        font-size: 30px;
+    }
+
+    .containInfo p {
+        font-size: 12px;
+    }
+
+    .back:hover {
+        transform: scale(1);
+        box-shadow: none;
+    }
+
+    .containTablero.facil {
+        grid-template-rows: repeat(4, 90px);
+        grid-template-columns: repeat(4, 70px);
+        gap: 15px;
+    }
+
+    .containTablero.medio, .containTablero.dificil {
+        grid-template-rows: repeat(6, 70px);
+        grid-template-columns: repeat(6, 50px);
+        gap: 10px;
+    }
+
+    .modalFin{
+        width: 100%;
+    }
+
+    .containFin {
+        width: 95%;
+        padding: 30px 0;
+    }
+
+    .containFin h1 {
+        font-size: 30px;
+    }
+    .container p {
+        font-size: 12px;
+    }
+
+    .buttonFin {
+        width: 90%;
+        margin: auto;
+    }
+    .buttonFin button {
+        font-size: 12px;
+    }
+    .buttonFin .cerrar{
+        background-color: #bc9898;
+    }
+
 }
