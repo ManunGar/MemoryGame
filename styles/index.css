@@ -392,13 +392,11 @@ header {
     .title {
         background-color: #F9EFDB;
         position: static;
-        z-index: 3;
     }
     
     header {
         background-color: #F9EFDB;
         padding-top: 10px;
-        z-index: 2;
     }
 
     .containTablero {
